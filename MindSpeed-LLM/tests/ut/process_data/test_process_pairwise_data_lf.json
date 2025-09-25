@@ -1,0 +1,33 @@
+{
+    "test_alpaca_dataset": [
+        {
+            "params": {
+                "input": "/data/pairwise_dataset/orca_rlhf.jsonl",
+                "tokenizer-type": "PretrainedFromHF",
+                "output-prefix": "/data/pairwise_dataset/output/orca_rlhf/orca_rlhf", 
+                "tokenizer-name-or-path": "/data/llama-2-7b-hf/",
+                "workers": 4,
+                "log-interval": 1000,
+                "handler-name": "AlpacaStylePairwiseHandler",
+                "prompt-type": "llama2",
+                "map-keys": "{\"prompt\":\"question\", \"query\":\"\", \"system\":\"system\"}"
+            },
+            "baseline": "/data/pairwise_dataset/baseline/orca_rlhf/orca_rlhf"
+        }
+    ],
+    "test_sharegpt_dataset": [
+        {
+            "params": {
+                "input": "/data/pairwise_dataset/dpo_en.json",
+                "tokenizer-type": "PretrainedFromHF",
+                "handler-name": "SharegptStylePairwiseHandler",
+                "output-prefix": "/data/pairwise_dataset/output/dpo_en/dpo_en", 
+                "tokenizer-name-or-path": "/data/chatglm3-6b-base-hf/",
+                "workers": 4,
+                "log-interval": 1000,
+                "prompt-type": "chatglm3"
+            },
+            "baseline": "/data/pairwise_dataset/baseline/dpo_en/dpo_en"
+        }
+    ]
+}

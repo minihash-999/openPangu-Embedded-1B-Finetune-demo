@@ -1,0 +1,95 @@
+ {
+    "test_qwen15_7B_mmlu_evaluate": [
+        {
+            "param": {
+                "task-data-path": "/data/eval_data/mmlu/data/test/",
+                "task": "mmlu",
+                "tensor-model-parallel-size": 8,
+                "pipeline-model-parallel-size": 1,
+                "seq-length": 8192,
+                "max-new-tokens": 1,
+                "max-position-embeddings": 8192,
+                "num-layers": 32,
+                "hidden-size": 4096,
+                "ffn-hidden-size": 11008,
+                "num-attention-heads": 32,
+                "disable-bias-linear": null,
+                "swiglu": null,
+                "position-embedding-type": "rope",
+                "load": "/data/qwen15-7B-hf/ckpt/",
+                "normalization": "RMSNorm",
+                "tokenizer-type": "PretrainedFromHF",
+                "tokenizer-name-or-path": "/data/qwen15-7B-hf/",
+                "tokenizer-not-use-fast": null,
+                "micro-batch-size": 1,
+                "exit-on-missing-checkpoint": null,
+                "no-load-rng": null,
+                "no-load-optim": null,
+                "untie-embeddings-and-output-weights": null,
+                "add-qkv-bias": null,
+                "make-vocab-size-divisible-by": 16,
+                "padded-vocab-size": 151936,
+                "rotary-base": 1000000,
+                "no-gradient-accumulation-fusion": null,
+                "max-eval-samples": 3,
+                "attention-softmax-in-fp32": null,
+                "seed": 42,
+                "bf16": null,
+                "no-chat-template": null,
+                "use-deter-comp": null
+            }
+        }
+    ],
+
+    "test_qwen15_7B_greedy_search": [
+        {
+            "param": {
+                "tensor-model-parallel-size": 8,
+                "pipeline-model-parallel-size": 1,
+                "num-layers": 32,
+                "hidden-size": 4096,
+                "num-attention-heads": 32,
+                "ffn-hidden-size": 11008,
+                "max-position-embeddings": 8192,
+                "seq-length": 8192,
+                "make-vocab-size-divisible-by": 16,
+                "padded-vocab-size": 151936,
+                "rotary-base": 1000000,
+                "untie-embeddings-and-output-weights": null,
+                "micro-batch-size": 1,
+                "swiglu": null,
+                "disable-bias-linear": null,
+                "tokenizer-type": "PretrainedFromHF",
+                "tokenizer-name-or-path": "/data/qwen15-7B-hf/",
+                "load": "/data/qwen15-7B-hf/ckpt/",
+                "normalization": "RMSNorm",
+                "position-embedding-type": "rope",
+                "norm-epsilon": 1e-6,
+                "hidden-dropout": 0,
+                "attention-dropout": 0,
+                "tokenizer-not-use-fast": null,
+                "add-qkv-bias": null,
+                "max-new-tokens": 180,
+                "no-gradient-accumulation-fusion": null,
+                "exit-on-missing-checkpoint": null,
+                "attention-softmax-in-fp32": null,
+                "seed": 42,
+                "bf16": null,
+                "task": "greedy",
+                "use-deter-comp": null
+            }
+        }
+    ],
+
+    "test_preprocess_pretrain_data": [
+        {
+            "param": {
+                "input": "/data/train-00000-of-00001-a09b74b3ef9c3b56.parquet",
+                "tokenizer-type": "PretrainedFromHF",
+                "tokenizer-name-or-path": "/data/qwen15-7B-hf/"
+            },
+            "prefix": "alpaca"
+        }
+    ]
+}
+

@@ -1,0 +1,15 @@
+numpy>=1.19.2,<2.0.0
+transformers==4.43.2
+transformers_stream_generator
+sympy
+decorator
+scipy
+sentencepiece
+einops
+datasets>=2.16.0
+pybind11
+accelerate
+six
+protobuf
+peft==0.7.1
+tiktoken

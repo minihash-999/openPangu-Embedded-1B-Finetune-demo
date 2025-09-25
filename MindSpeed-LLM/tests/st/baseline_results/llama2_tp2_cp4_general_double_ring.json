@@ -1,0 +1,78 @@
+{
+    "lm loss": [
+        2.17736,
+        2.121818,
+        2.116518,
+        2.087001,
+        2.07734,
+        1.925661,
+        1.912793,
+        1.869064,
+        1.917361,
+        1.585124,
+        1.553152,
+        1.595199,
+        1.570609,
+        1.550481,
+        1.514153
+    ],
+    "throughput": [
+        2.1,
+        29.7,
+        30.1,
+        30.2,
+        29.8,
+        29.5,
+        28.7,
+        29.8,
+        29.3,
+        28.7,
+        27.7,
+        28.5,
+        27.7,
+        29.5,
+        29.3
+    ],
+    "memo info": [
+        {
+            "rank": 0,
+            "allocated memory": 27320.79052734375,
+            "max allocated memory": 27511.296875
+        },
+        {
+            "rank": 1,
+            "allocated memory": 27320.79052734375,
+            "max allocated memory": 27511.296875
+        },
+        {
+            "rank": 2,
+            "allocated memory": 27320.79248046875,
+            "max allocated memory": 27511.298828125
+        },
+        {
+            "rank": 3,
+            "allocated memory": 27320.79248046875,
+            "max allocated memory": 27511.298828125
+        },
+        {
+            "rank": 4,
+            "allocated memory": 27320.81884765625,
+            "max allocated memory": 27511.3251953125
+        },
+        {
+            "rank": 5,
+            "allocated memory": 27320.81884765625,
+            "max allocated memory": 27511.3251953125
+        },
+        {
+            "rank": 6,
+            "allocated memory": 27320.75830078125,
+            "max allocated memory": 27511.2646484375
+        },
+        {
+            "rank": 7,
+            "allocated memory": 27320.75830078125,
+            "max allocated memory": 27511.2646484375
+        }
+    ]
+}
