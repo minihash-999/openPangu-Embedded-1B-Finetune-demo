@@ -1,5 +1,5 @@
 # openPangu-Embedded-1B-Finetune-Demo
-最近基于华为开源的openPangu-Embedded-1B模型进行了续训，把过程中踩的坑做了份记录，总结了一份训练指南，主要包括这几块：
+最近基于华为开源的openPangu-Embedded-1B模型进行了续训，总结了一份训练指南，主要包括这几块：
 1. 环境搭建。
 2. 训练代码的修改，详见（续训代码部分）。
 3. 数据处理的修改，为了最大程度保留模型的效果，需要将续训的数据格式处理为对应的格式。
@@ -47,12 +47,6 @@ self.linear_proj = build_module(
 ```python
 add_dense_bias: bool = False
 ```
-3、增加参数
-文件位置：megatron/training/arguments.py
-在函数_add_training_args()下面增加如下代码
-```python
-group.add_argument("-add-dense-bias", action="store_true",
-					help="add bias in the attn project layers")
 
 ### 三、数据处理（cache和merge）
 数据处理主要包括两部，数据cache和数据merge，根据盘古模型的回答格式，对其训练数据的格式进行了复原，因此增加了数据处理相关代码
